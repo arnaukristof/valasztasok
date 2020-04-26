@@ -27,5 +27,6 @@ export default class Szavazatok {
         this._vnev = s[2];
         this._knev = s[3];
         this._partnev = s[4];
+        //asd
     }
 }
