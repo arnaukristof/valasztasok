@@ -1,7 +1,7 @@
 {
-    "name": "jedlik-typescript-vscode-template",
+    "name": "arnaukristof-valasztasok",
     "version": "1.0.0",
-    "description": "Jedlik project template for using TypeScript, Jest and Node.js in VS Code.",
+    "description": "Arnau Kristóf Választások using TypeScript, Jest and Node.js in VS Code.",
     "engines": {
         "node": "13.x"
     },
@@ -9,7 +9,7 @@
     "repository": {
         "private": true,
         "type": "git",
-        "url": "https://github.com/nitslaszlo/JedlikTsTemplate"
+        "url": "https://github.com/arnaukristof/valasztasok"
     },
     "scripts": {
         "start": "node ./dist/App.js",
@@ -20,7 +20,7 @@
         "test": "jest || ECHO.",
         "dev": "nodemon"
     },
-    "author": "Nits László",
+    "author": "Arnau Kristóf",
     "license": "MIT",
     "dependencies": {
         "tslib": "^1.11.1"
