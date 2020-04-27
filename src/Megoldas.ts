@@ -4,6 +4,10 @@ import Szavazatok from "./Szavazatok";
 export default class Megoldas {
     private _szavazatok: Szavazatok[] = [];
 
+    public get osszSzavazat(): number {
+        return 12345;
+    }
+
     public get szavazatok(): Szavazatok[] {
         return this._szavazatok;
     }

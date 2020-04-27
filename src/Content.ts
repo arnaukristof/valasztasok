@@ -49,6 +49,7 @@ export default class Content {
         //if(bekertNev == )
 
         //4. feladat:
+        res.write(`4. Feladat: A választáson ${megoldas.osszSzavazat} állampolgár, a jogosultak %-a vett részt.`);
 
         // <---- Fejezd be a kódolást
 
