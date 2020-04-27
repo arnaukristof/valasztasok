@@ -1,7 +1,7 @@
 {
     "name": "arnaukristof-valasztasok",
     "version": "1.0.0",
-    "description": "Arnau Kristóf Választások using TypeScript, Jest and Node.js in VS Code.",
+    "description": "Arnau Kristóf Választások",
     "engines": {
         "node": "13.x"
     },
