@@ -35,7 +35,7 @@ export default class Content {
 
         //2. feladat: a választáson indult képviselők számának meghatározása
 
-        res.write(`2. Feladat: A helytartósági választáson ${megoldas.kepviselokSzama} képviselőjelölt indult.<br>`);
+        res.write(`2. Feladat: A helytartósági választáson ${megoldas.kepviselokSzama} képviselőjelölt indult.\n`);
 
         //3. feladat: képviselő nevének bekérése, ha nem szerepel ilyen név, megfelelő válaszüzenet megjelenítése
 
@@ -48,7 +48,7 @@ export default class Content {
         //if(bekertNev == )
 
         //4. feladat:
-        res.write(`4. Feladat: A választáson ${megoldas.osszSzavazat} állampolgár, a jogosultak ${megoldas.szavazatiArany}%-a vett részt.`);
+        res.write(`4. Feladat: A választáson ${megoldas.osszSzavazat} állampolgár, a jogosultak ${megoldas.szavazatiArany.toFixed(2)}%-a vett részt.\n`);
 
         // <---- Fejezd be a kódolást
 
