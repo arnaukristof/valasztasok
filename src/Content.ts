@@ -1,8 +1,8 @@
 ﻿import fs from "fs";
 import http from "http";
 import Megoldas from "./Megoldas";
-/*import url from "url";
-import Szavazatok from "./Szavazatok";*/
+import url from "url";
+import Szavazatok from "./Szavazatok";
 
 interface InputInterface {
     name: string;
@@ -40,7 +40,6 @@ export default class Content {
 
         //3. feladat: képviselő nevének bekérése, ha nem szerepel ilyen név, megfelelő válaszüzenet megjelenítése
 
-        /*
         const u = url.parse(req.url as string, true).query;
         let bekertNev: string = u.bekertNev as string;
         if (bekertNev === "") {
@@ -48,7 +47,6 @@ export default class Content {
         }
         res.write(`3. Feladat: Adja megy egy képviselő nevét: <input type='text' name='bekertNev' value=${bekertNev} style='width: 12em';>\n`);
 
-        */
         //4. feladat:
 
         // <---- Fejezd be a kódolást
