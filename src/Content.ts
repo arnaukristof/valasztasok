@@ -24,7 +24,7 @@ export default class Content {
         res.write("<head>");
         res.write("<style>input, pre {font-family:monospace; font-size:1em; font-weight:bold;}</style>");
         res.write("<meta name='viewport' content='width=device-width, initial-scale=1.0'>");
-        res.write("<title>Jedlik Ts Template</title>");
+        res.write("<title>Választások</title>");
         res.write("</head>");
         res.write("<body><form><pre>");
 
@@ -46,6 +46,7 @@ export default class Content {
             bekertNev = megoldas.elsokepviselo;
         }
         res.write(`3. Feladat: Adja megy egy képviselő nevét: <input type='text' name='bekertNev' value=${bekertNev} style='width: 12em';>\n`);
+        //if(bekertNev == )
 
         //4. feladat:
 

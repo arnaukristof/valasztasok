@@ -13,9 +13,17 @@ export default class Megoldas {
     }
 
     public get elsokepviselo(): string {
-        return this._szavazatok[0].vnev + " " + this._szavazatok[0].knev;
+        return this._szavazatok[0].nev;
     }
     //public get szavazatokszama(): number {}
+
+    /*public get partSzavazat(): number {
+        let osszSzavazat = 0;
+        for(const i of sz)
+        {
+            osszSzavazat += this._szavazatok.
+        }
+    }*/
 
     constructor(forras: string) {
         fs.readFileSync(forras)
