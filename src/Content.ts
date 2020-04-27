@@ -2,7 +2,6 @@
 import http from "http";
 import Megoldas from "./Megoldas";
 import url from "url";
-import Szavazatok from "./Szavazatok";
 
 interface InputInterface {
     name: string;
@@ -32,7 +31,7 @@ export default class Content {
 
         //1. feladat: fájlok beolvasása
 
-        const megoldas: Megoldas = new Megoldas("szavazatok.txt");
+        const megoldas = new Megoldas("szavazatok.txt");
 
         //2. feladat: a választáson indult képviselők számának meghatározása
 
@@ -49,7 +48,7 @@ export default class Content {
         //if(bekertNev == )
 
         //4. feladat:
-        res.write(`4. Feladat: A választáson ${megoldas.osszSzavazat} állampolgár, a jogosultak %-a vett részt.`);
+        res.write(`4. Feladat: A választáson ${megoldas.osszSzavazat} állampolgár, a jogosultak ${megoldas.szavazatiArany}%-a vett részt.`);
 
         // <---- Fejezd be a kódolást
 

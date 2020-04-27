@@ -10,6 +10,7 @@ export default class Szavazatok {
     public get szavazatokszama(): number {
         return this._szavazatokszama;
     }
+
     public get nev(): string {
         return this._nev;
     }
