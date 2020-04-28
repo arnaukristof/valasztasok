@@ -53,11 +53,15 @@ export default class Content {
 
         //5. feladat:
         res.write("5. Feladat:\n");
-        res.write(`Gyümölcsevők pártja= ${megoldas.partSzavazatokArany("GYEP")}%\n`);
-        res.write(`Húsevők pártja= ${megoldas.partSzavazatokArany("HEP")}%\n`);
-        res.write(`Tejivók Szövetsége= ${megoldas.partSzavazatokArany("TISZ")}%\n`);
-        res.write(`Zöldségevők pártja= ${megoldas.partSzavazatokArany("ZEP")}%\n`);
-        res.write(`Független jelöltek= ${megoldas.partSzavazatokArany("-")}%\n`);
+        res.write(`Gyümölcsevők pártja= ${megoldas.partSzavazatokArany("GYEP").toFixed(2)}%\n`);
+        res.write(`Húsevők pártja= ${megoldas.partSzavazatokArany("HEP").toFixed(2)}%\n`);
+        res.write(`Tejivók Szövetsége= ${megoldas.partSzavazatokArany("TISZ").toFixed(2)}%\n`);
+        res.write(`Zöldségevők pártja= ${megoldas.partSzavazatokArany("ZEP").toFixed(2)}%\n`);
+        res.write(`Független jelöltek= ${megoldas.partSzavazatokArany("-").toFixed(2)}%\n`);
+
+        //6. feladat:
+        res.write(`6. Feladat: A legtöbb szavazatot kapta: ${megoldas.legtobbSzavazatotSzerzett}, ${megoldas.partNev}\n`);
+
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");

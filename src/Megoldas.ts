@@ -1,5 +1,6 @@
 import fs from "fs";
 import Szavazatok from "./Szavazatok";
+import { maxHeaderSize } from "http";
 
 export default class Megoldas {
     private _szavazatok: Szavazatok[] = [];
@@ -60,6 +61,37 @@ export default class Megoldas {
             }
         }
         return (partSzavazat / this.osszSzavazat) * 100;
+    }
+
+    public get legtobbSzavazat(): number {
+        let max = -1;
+        for (const i of this._szavazatok) {
+            if (i.szavazatokszama > max) {
+                max = i.szavazatokszama;
+            }
+        }
+        return max;
+    }
+    public get legtobbSzavazatotSzerzett(): string {
+        let kepviselo = "";
+        for (const i of this._szavazatok) {
+            if (this.legtobbSzavazat == i.szavazatokszama) {
+                kepviselo = i.nev;
+            }
+        }
+        return kepviselo;
+    }
+
+    public get partNev(): string {
+        let part = "";
+        for (const i of this._szavazatok) {
+            if (i.nev == this.legtobbSzavazatotSzerzett && i.partnev != "-") {
+                part = i.partnev;
+            } else {
+                part = "független";
+            }
+        }
+        return part;
     }
 
     public constructor(forras: string) {
