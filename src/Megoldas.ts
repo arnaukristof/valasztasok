@@ -1,6 +1,5 @@
 import fs from "fs";
 import Szavazatok from "./Szavazatok";
-import { maxHeaderSize } from "http";
 
 export default class Megoldas {
     private _szavazatok: Szavazatok[] = [];

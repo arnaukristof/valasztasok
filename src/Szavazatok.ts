@@ -19,14 +19,6 @@ export default class Szavazatok {
         return this._partnev;
     }
 
-    /*public get osszesSzavazat(): number{
-        let osszSzavazat = 0;
-        for(const i of this._szavazatokszama)
-        {
-            osszSzavazat += this._szavazatokszama.
-        }
-        return osszSzavazat;
-    }*/
     constructor(adatok: string) {
         const s: string[] = adatok.split(" ");
         this._sorszam = parseInt(s[0]);
