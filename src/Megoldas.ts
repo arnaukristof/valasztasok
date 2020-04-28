@@ -4,7 +4,7 @@ import Szavazatok from "./Szavazatok";
 export default class Megoldas {
     private _szavazatok: Szavazatok[] = [];
 
-    public get osszSzavazat(): number {
+    public get jogosultak(): number {
         return 12345;
     }
 
@@ -41,7 +41,25 @@ export default class Megoldas {
         for (const i of this._szavazatok) {
             szavazatokSZ += i.szavazatokszama;
         }
-        return (this.osszSzavazat / szavazatokSZ) * 100;
+        return (this.jogosultak / szavazatokSZ) * 100;
+    }
+
+    public get osszSzavazat(): number {
+        let szam = 0;
+        for (const i of this._szavazatok) {
+            szam += i.szavazatokszama;
+        }
+        return szam;
+    }
+
+    public partSzavazatokArany(part: string): number {
+        let partSzavazat = 0;
+        for (const i of this._szavazatok) {
+            if (part == i.partnev) {
+                partSzavazat += i.szavazatokszama;
+            }
+        }
+        return (partSzavazat / this.osszSzavazat) * 100;
     }
 
     public constructor(forras: string) {

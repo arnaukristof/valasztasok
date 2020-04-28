@@ -48,12 +48,16 @@ export default class Content {
         } else {
             res.write(`${megoldas.nevKeres(bekertNev)} összesen ${megoldas.kepviseloSzavazatai(bekertNev)} db szavazatot kapott.\n`);
         }
-
-        //if(bekertNev == )
-
         //4. feladat:
-        res.write(`4. Feladat: A választáson ${megoldas.osszSzavazat} állampolgár, a jogosultak ${megoldas.szavazatiArany.toFixed(2)}%-a vett részt.\n`);
+        res.write(`4. Feladat: A választáson ${megoldas.jogosultak} állampolgár, a jogosultak ${megoldas.szavazatiArany.toFixed(2)}%-a vett részt.\n`);
 
+        //5. feladat:
+        res.write("5. Feladat:\n");
+        res.write(`Gyümölcsevők pártja= ${megoldas.partSzavazatokArany("GYEP")}%\n`);
+        res.write(`Húsevők pártja= ${megoldas.partSzavazatokArany("HEP")}%\n`);
+        res.write(`Tejivók Szövetsége= ${megoldas.partSzavazatokArany("TISZ")}%\n`);
+        res.write(`Zöldségevők pártja= ${megoldas.partSzavazatokArany("ZEP")}%\n`);
+        res.write(`Független jelöltek= ${megoldas.partSzavazatokArany("-")}%\n`);
         // <---- Fejezd be a kódolást
 
         res.write("</pre></form></body></html>");
