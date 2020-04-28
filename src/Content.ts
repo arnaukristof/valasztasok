@@ -44,9 +44,9 @@ export default class Content {
 
         res.write(`3. Feladat: Adja megy egy képviselő nevét: <input type='text' name='bekertNev' value=${bekertNev} style='width: 12em';>\n`);
         if (bekertNev === "" || bekertNev != megoldas.nevKeres(bekertNev)) {
-            res.write("Ilyen nevű képviselő nem szerepel a nyilvántartásban!");
+            res.write("Ilyen nevű képviselő nem szerepel a nyilvántartásban!\n");
         } else {
-            res.write(`${megoldas.nevKeres(bekertNev)} összesen ${megoldas.kepviseloSzavazatai(bekertNev)} db szavazatot kapott.`);
+            res.write(`${megoldas.nevKeres(bekertNev)} összesen ${megoldas.kepviseloSzavazatai(bekertNev)} db szavazatot kapott.\n`);
         }
 
         //if(bekertNev == )
