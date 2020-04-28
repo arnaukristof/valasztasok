@@ -40,11 +40,15 @@ export default class Content {
         //3. feladat: képviselő nevének bekérése, ha nem szerepel ilyen név, megfelelő válaszüzenet megjelenítése
 
         const u = url.parse(req.url as string, true).query;
-        let bekertNev: string = u.bekertNev as string;
-        if (bekertNev === "") {
-            bekertNev = megoldas.elsokepviselo;
-        }
+        const bekertNev: string = u.bekertNev as string;
+
         res.write(`3. Feladat: Adja megy egy képviselő nevét: <input type='text' name='bekertNev' value=${bekertNev} style='width: 12em';>\n`);
+        if (bekertNev === "" || bekertNev != megoldas.nevKeres(bekertNev)) {
+            res.write("Ilyen nevű képviselő nem szerepel a nyilvántartásban!");
+        } else {
+            res.write(`${megoldas.nevKeres(bekertNev)} összesen ${megoldas.kepviseloSzavazatai(bekertNev)} db szavazatot kapott.`);
+        }
+
         //if(bekertNev == )
 
         //4. feladat:

@@ -16,8 +16,24 @@ export default class Megoldas {
         return this._szavazatok.length;
     }
 
-    public get elsokepviselo(): string {
-        return this._szavazatok[0].nev;
+    public nevKeres(bekert: string): string {
+        let joBekert = "";
+        for (const i of this._szavazatok) {
+            if (bekert == i.nev) {
+                joBekert = i.nev;
+            }
+        }
+        return joBekert;
+    }
+
+    public kepviseloSzavazatai(bekert: string): number {
+        let szSzam = 0;
+        for (const i of this._szavazatok) {
+            if (bekert == i.nev) {
+                szSzam = i.szavazatokszama;
+            }
+        }
+        return szSzam;
     }
 
     public get szavazatiArany(): number {
@@ -27,6 +43,7 @@ export default class Megoldas {
         }
         return (this.osszSzavazat / szavazatokSZ) * 100;
     }
+
     public constructor(forras: string) {
         fs.readFileSync(forras)
             .toString()
