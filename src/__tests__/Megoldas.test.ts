@@ -16,11 +16,11 @@ describe("Megoldás osztály unit tesztek", () => {
     });
 
     it("Összes szavazat száma", async () => {
-        expect(instance.osszSzavazat).toBe(1636);
+        expect(instance.osszSzavazat).toBe(4713);
     });
 
     it("Legtöbb szavazat száma", async () => {
-        expect(instance.legtobbSzavazat).toBe(1636);
+        expect(instance.legtobbSzavazat).toBe(288);
     });
 
     it("Legtöbb szavazatot szerzett képviselő megnevezése", async () => {

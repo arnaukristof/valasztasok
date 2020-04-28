@@ -61,7 +61,6 @@ export default class Content {
 
         //6. feladat:
         res.write(`6. Feladat: A legtöbb szavazatot kapta: ${megoldas.legtobbSzavazatotSzerzett}, ${megoldas.partNev}\n`);
-        res.write(`${megoldas.legtobbSzavazat}, ${megoldas.osszSzavazat}`);
 
         // <---- Fejezd be a kódolást
 
